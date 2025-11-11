@@ -1,0 +1,16 @@
+s1, s2 = set(), set()
+f = open('DATA1.in', 'r')
+for line in f:
+    a = line.lower().split()
+    for s in a: s1.add(s)
+f.close()
+f = open('DATA2.in', 'r')
+for line in f:
+    a = line.lower().split()
+    for s in a: s2.add(s)
+f.close()
+hieu1 = sorted(list(s1 - s2))
+hieu2 = sorted(list(s2 - s1))
+for x in hieu1: print(x, end = ' ')
+print()
+for x in hieu2: print(x, end = ' ')
